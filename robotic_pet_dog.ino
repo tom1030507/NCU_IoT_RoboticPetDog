@@ -87,12 +87,12 @@ void loop() {
         BLEScanResults foundDevices = pBLEScan->start(scanTime, false);
         Serial.printf("Devices found: %d\n", foundDevices.getCount());
         pBLEScan->clearResults();
-        delay(100);
     } else {
         stopMotors();
     }
 
     updateOLED();
+    delay(100);
 }
 
 void controlCarMovement(int rssi) {
